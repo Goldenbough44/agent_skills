@@ -29,27 +29,32 @@ Ask what a reader would get wrong without the comment. Usually nothing, and the 
 Example:
 - Instead of: `// only using 1 GPU right now but this might change, so not hardcoding it`
 - Write: nothing.
-- Why: current circumstances and their expected changes belong in developer docs, not in commentary.
+- Why: provisional circumstances belong in developer docs, not in commentary.
 
 Example:
 - Instead of: `// Belt is not a single tier. It has independent speed and CarrierKind specifications.`
 - Write: nothing.
-- Why: it must be in specification, not in commentary.
+- Why: duplicating the spec.
 
 Example:
 - Instead of: `// we found out hardcoding broke things so we changed it`
 - Write: `// requires CLI flags — hardcoded values break under multi-GPU`
-- Why: the constraint is real and a maintainer could undo it without comments, but the discovery story adds nothing.
+- Why: the constraint is non-obvious on code itself so commentary is needed; the discovery story is decision history.
 
 Example:
 - Instead of: no commentary
 - Write: `// insertion order is load order — recipes resolve ingredient IDs against entries already inserted, so a sorted container breaks forward references`
-- Why: a comment that has to exist, because a reasonable cleanup would silently break the code.
+- Why: an invariant a reasonable cleanup would silently break.
 
 Example:
 - Instead of: `// We accumulate into sum, but each addition of a small value to a large accumulator loses the low-order bits of the small value. So we track the lost amount in c, subtract it from the next input, and recompute c from the difference between the rounded result and what we intended to add.`
 - Write: `// Kahan summation — c holds the low-order bits lost each round and feeds them back in`
 - Why: the algorithm is non-obvious enough to need a comment, but naming it and stating the mechanism in one line is enough.
+
+Example:
+- Instead of: no commentary on `dirty: Vec<usize>` in a struct
+- Write: `// indices into self.nodes, invalidated by any removal`
+- Why: a field's usage contract is non-obvious, so the comment carries what the declaration can't.
 
 ## Scope
 
