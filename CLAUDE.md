@@ -4,4 +4,4 @@ Always read:
 - $caveman
 - $programming-guidelines
 - $implementation-approval-gate
-- $readme-commentary-guidelines
+- $commentary-guidelines
