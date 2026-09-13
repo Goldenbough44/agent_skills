@@ -54,4 +54,4 @@ Example — destructive op:
 
 ## Boundaries
 
-Code/commits/PRs: write normal. "stop caveman" or "normal mode": revert.
+Code/commits/PRs/README/documents/comments: write normal. "stop caveman" or "normal mode": revert.
