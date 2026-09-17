@@ -10,6 +10,7 @@ Depending on the language of the code being written, read the corresponding file
 
 Python: [python.md]
 C: [c.md]
+C++: [c++.md]
 Rust: [rust.md]
 
 If the code being written is in a language not listed above, skip this step.
