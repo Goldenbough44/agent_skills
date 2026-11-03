@@ -1,7 +1,7 @@
 ---
 name: simple-english
 description: |
-  Write or rewrite text in plain, layman-readable English in the spirit of
+  When using English language, write or rewrite text in plain, layman-readable English in the spirit of
   ASD-STE100 Simplified Technical English: short sentences, active voice,
   simple tenses, one word one meaning, condition before command, every
   technical term defined at first use, no AI slop. Default mode is Plain.
@@ -21,7 +21,7 @@ metadata:
 
 # Simple English
 
-Write plain English that a smart reader outside your field understands on one read. The rules come from ASD-STE100, the controlled language aerospace uses so a tired mechanic cannot misread an instruction. Two registers exist: the document you write or rewrite, and the reply you type in chat. Each has its own short rule set below. Nothing else in this file is optional.
+When using English language, write plain English that a smart reader outside your field understands on one read. The rules come from ASD-STE100, the controlled language aerospace uses so a tired mechanic cannot misread an instruction. Two registers exist: the document you write or rewrite, and the reply you type in chat. Each has its own short rule set below. Nothing else in this file is optional.
 
 ## The Document
 
@@ -75,17 +75,10 @@ Every chat reply, in every mode, follows these rules. Read them last, apply them
 
 ## Modes
 
-**Plain** is the default and is all of the above. **Strict** applies when the user names STE, ASD-STE100, or compliance: read `references/strict-vocabulary.md` before you draft the document, and say once that no tool guarantees compliance. The reply stays Plain in every mode.
+**Plain** is the default and is all of the above. **Strict** applies when the user names STE, ASD-STE100, or compliance: say once that no tool guarantees compliance. The reply stays Plain in every mode.
 
 When asked to CHECK text instead of writing it, first open `references/rule-catalog.md`. Then report each violation as: rule number quoted from that file, the offending text, a compliant rewrite. Never cite a rule number from memory. When the user asked for compliance, end with one sentence: no tool can guarantee ASD-STE100 compliance, and the standard is a free download at asd-ste100.org.
 
 ## Limits
 
 These rules are for facts and instructions, not marketing copy or brand writing: they delete persuasion by design. Say so, and offer them for the docs instead.
-
-## References
-
-- `references/rule-catalog.md` — the 53 rules of Issue 9 with software examples, for CHECK mode
-- `references/strict-vocabulary.md` — the dictionary discipline for Strict mode
-- `references/word-swaps.md` — slop-to-plain word map
-- `references/use-cases.md` — mode and pattern for error messages, runbooks, incident reports, release notes, commits, agent prompts, UI copy, translation prep
